@@ -1,21 +1,20 @@
-/* eslint no-unused-expressions: 0 */
-import { default as React } from 'react';
-import { default as TestUtils } from 'react/lib/ReactTestUtils';
-import { default as componentDidMount } from './componentDidMount.js';
+import React from 'react';
+import { expect } from 'chai'
+import { spy } from 'sinon'
+import { mount } from 'enzyme'
+import componentDidMount from '../src/componentDidMount';
 
-describe('decorators/componentDidMount', () => {
-  it('works with componentDidMount HOC', () => { // eslint-disable-line padded-blocks
-    const callbackSpy = sinon.spy();
+describe('react-lifecycle-hoc/componentDidMount', () => {
+  it('works with HOC', () => {
+    const callbackSpy = spy();
 
-    @componentDidMount(callbackSpy)
-    class Container extends React.Component {
-      render() {
-        return <div/>;
-      }
-    }
+    const Container = componentDidMount(
+      callbackSpy,
+      () => <div />,
+    );
 
-    TestUtils.renderIntoDocument(<Container/>);
+    const component = mount(<Container />);
 
-    expect(callbackSpy).to.have.been.calledOnce;
+    expect(callbackSpy).to.be.callOnce;
   });
 });
