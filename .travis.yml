@@ -5,7 +5,10 @@ cache:
 notifications:
   email: evenchange4@gmail.com
 node_js:
-  - "5"
   - "4"
+  - "4.2.2"
+branches:
+  only:
+    - master
 script:
   - npm run test
