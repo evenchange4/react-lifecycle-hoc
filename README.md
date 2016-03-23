@@ -14,7 +14,7 @@ npm install react-lifecycle-hoc --save
 
 ## API
 
-```
+```js
 componentDidMount(
   callback: (props: Object) => void,
   BaseComponent: ReactElementType
@@ -25,7 +25,7 @@ componentDidMount(
 
 - As HOC
 
-```
+```js
 import { componentDidMount } from 'react-lifecycle-hoc';
 
 componentDidMount(
@@ -36,7 +36,7 @@ componentDidMount(
 
 - ES7 decorator
 
-```
+```js
 @componentDidMount(callback)
 class Container extends React.Component {
   render() {
