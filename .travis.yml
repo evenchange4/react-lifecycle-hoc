@@ -22,6 +22,7 @@ before_install:
   - npm set progress=false
 
 script:
+  - npm run lint
   - npm run test:coverage
 
 after_success: '[ \"$TRAVIS_PULL_REQUEST\" != \"false\" ] && npm run coverage'

@@ -52,6 +52,12 @@ componentDidMount(
 ): ReactElementType
 ```
 
+## Test
+
+```
+$ npm run test:watch
+```
+
 ---
 
 ## CONTRIBUTING
