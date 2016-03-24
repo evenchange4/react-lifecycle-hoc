@@ -1,4 +1,7 @@
 # react-lifecycle-hoc
+
+> Higher-order components of react lifecycle.
+
 [![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coverage Status][coveralls-badge]][coveralls]
 
 [build-badge]: https://img.shields.io/travis/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
@@ -10,19 +13,10 @@
 [coveralls-badge]: https://img.shields.io/coveralls/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/github/evenchange4/react-lifecycle-hoc
 
-> Higher-order components of react lifecycle.
+## Installation
 
-```
-npm install react-lifecycle-hoc --save
-```
-
-## API
-
-```js
-componentDidMount(
-  callback: (props: Object) => void,
-  BaseComponent: ReactElementType
-): ReactElementType
+```console
+$ npm install react-lifecycle-hoc --save
 ```
 
 ## Usage
@@ -48,3 +42,24 @@ class Container extends React.Component {
   }
 }
 ```
+
+## API
+
+```js
+componentDidMount(
+  callback: (props: Object) => void,
+  BaseComponent: ReactElementType
+): ReactElementType
+```
+
+---
+
+## CONTRIBUTING
+
+* ⇄ Pull requests and ★ Stars are always welcome.
+* For bugs and feature requests, please create an issue.
+* Pull requests must be accompanied by passing automated tests (`$ npm test`).
+
+## [CHANGELOG](CHANGELOG.md)
+
+## [LICENSE](LICENSE)

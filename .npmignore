@@ -1,7 +1,5 @@
 src
-.babelrc
 .editorconfig
-.eslintignore
-.eslintrc
+.nyc_output
 .npmignore
 .stylelintrc
