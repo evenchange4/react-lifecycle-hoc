@@ -1,20 +1,26 @@
 import React from 'react';
-import { expect } from 'chai'
-import { spy } from 'sinon'
+import test from 'ava';
+import sinon from 'sinon'
 import { mount } from 'enzyme'
-import componentDidMount from '../src/componentDidMount';
+import { default as reactLifecycleHoc, componentDidMount } from '../src/index';
 
-describe('react-lifecycle-hoc/componentDidMount', () => {
-  it('works with HOC', () => {
-    const callbackSpy = spy();
+test('should return a object', t => {
+  t.is(typeof reactLifecycleHoc, 'object');
+});
 
-    const Container = componentDidMount(
-      callbackSpy,
-      () => <div />,
-    );
+test('should contain componentDidMount function', t => {
+  t.is(typeof reactLifecycleHoc.componentDidMount, 'function');
+});
 
-    const component = mount(<Container />);
+test('should works with HOC', t => {
+  const callbackSpy = sinon.spy();
 
-    expect(callbackSpy).to.be.callOnce;
-  });
+  const Container = componentDidMount(
+    callbackSpy,
+    () => <div />,
+  );
+
+  const component = mount(<Container />);
+
+  t.true(callbackSpy.calledOnce);
 });
