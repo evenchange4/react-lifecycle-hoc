@@ -7,7 +7,7 @@
 [npm-badge]: https://img.shields.io/npm/v/react-lifecycle-hoc.svg?style=flat-square
 [npm]: https://www.npmjs.org/package/react-lifecycle-hoc
 
-[coveralls-badge]: https://img.shields.io/coveralls/jekyll/jekyll.svg?style=flat-square
+[coveralls-badge]: https://img.shields.io/coveralls/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/github/evenchange4/react-lifecycle-hoc
 
 > Higher-order components of react lifecycle.
