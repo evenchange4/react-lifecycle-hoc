@@ -1,7 +1,7 @@
 import React from 'react';
 import test from 'ava';
-import sinon from 'sinon'
-import { mount } from 'enzyme'
+import sinon from 'sinon';
+import { mount } from 'enzyme';
 import { default as reactLifecycleHoc, componentDidMount } from '../src/index';
 
 test('should return a object', t => {
@@ -17,10 +17,10 @@ test('should works with HOC', t => {
 
   const Container = componentDidMount(
     callbackSpy,
-    () => <div />,
+    () => <div />
   );
 
-  const component = mount(<Container />);
+  mount(<Container />);
 
   t.true(callbackSpy.calledOnce);
 });
