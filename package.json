@@ -12,6 +12,8 @@
     "build": "NODE_ENV=production babel src --out-dir lib",
     "test": "ava",
     "test:watch": "npm test -- --watch",
+    "test:coverage": "nyc npm run test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -46,8 +48,10 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "chai": "^3.5.0",
+    "coveralls": "^2.11.8",
     "enzyme": "^2.2.0",
     "jsdom": "^8.1.0",
+    "nyc": "^6.1.1",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
     "sinon": "^1.17.3"
@@ -73,5 +77,13 @@
       "./test/.setup-browser-env.js"
     ],
     "babel": "inherit"
+  },
+  "nyc": {
+    "exclude": [
+      "test/**"
+    ],
+    "include": [
+      "src/**"
+    ]
   }
 }

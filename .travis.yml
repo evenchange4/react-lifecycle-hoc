@@ -1,14 +1,21 @@
+sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
-notifications:
-  email: evenchange4@gmail.com
 node_js:
   - "4"
   - "4.2.2"
-branches:
-  only:
-    - master
+
+# fail asap when there is a failure
+matrix:
+  fast_finish: true
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email: evenchange4@gmail.com
+
 script:
-  - npm run test
+  - npm run test:coverage
+
+after_success: npm run coverage
