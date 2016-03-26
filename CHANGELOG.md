@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* fix(eslint): introduce `lint-config-m` and fix parser error.
+
 ## [v1.0.2]
 
 * test(travis): setup test
