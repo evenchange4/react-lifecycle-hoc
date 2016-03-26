@@ -1,6 +1,6 @@
 {
   "name": "react-lifecycle-hoc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Higher-order components of react lifecycle.",
   "author": "Michael Hsu",
   "license": "MIT",
