@@ -53,11 +53,9 @@
     "babel-register": "^6.7.2",
     "coveralls": "^2.11.8",
     "enzyme": "^2.2.0",
-    "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.2.0",
-    "eslint-plugin-ava": "^1.3.1",
-    "eslint-plugin-react": "^4.2.3",
+    "eslint": "^2.5.1",
     "jsdom": "^8.1.0",
+    "lint-config-m": "^1.0.5",
     "nyc": "^6.1.1",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
@@ -95,56 +93,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "airbnb",
-      "plugin:ava/recommended"
-    ],
-    "plugins": [
-      "ava"
-    ],
-    "rules": {
-      "react/sort-comp": [
-        2,
-        {
-          "order": [
-            "lifecycle",
-            "/^on.+$/",
-            "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
-            "everything-else",
-            "/^render.+$/",
-            "render"
-          ]
-        }
-      ],
-      "object-shorthand": [
-        2,
-        "always"
-      ],
-      "object-curly-spacing": [
-        2,
-        "always",
-        {
-          "objectsInObjects": false,
-          "arraysInObjects": false
-        }
-      ],
-      "react/jsx-curly-spacing": [
-        2,
-        "never",
-        {
-          "allowMultiline": true
-        }
-      ],
-      "react/no-multi-comp": [
-        2,
-        {
-          "ignoreStateless": true
-        }
-      ],
-      "no-use-before-define": [
-        2,
-        "nofunc"
-      ],
-      "no-console": 2
-    }
+      "./node_modules/lint-config-m/eslint.js"
+    ]
   }
 }
