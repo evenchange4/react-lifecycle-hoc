@@ -27,7 +27,7 @@ $ npm install react-lifecycle-hoc --save
 import { componentDidMount } from 'react-lifecycle-hoc';
 
 componentDidMount(
-  props => console.log(props),
+  ({ props }) => console.log(props),
   () => <div/>,
 );
 ```
@@ -47,7 +47,7 @@ class Container extends React.Component {
 
 ```js
 componentDidMount(
-  callback: (props: Object) => void,
+  callback: (this: Object) => void,
   BaseComponent: ReactElementType
 ): ReactElementType
 ```

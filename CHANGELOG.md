@@ -3,8 +3,10 @@
 ## [HEAD]
 > Unreleased
 
-* [Breaking] refactor(componentDidMount): pass this to the callback
+## [v1.0.5]
+> Mar 27, 2016
 
+* [Breaking] refactor(componentDidMount): pass `this` to the callback.
 
 ## [v1.0.4]
 > Mar 26, 2016
