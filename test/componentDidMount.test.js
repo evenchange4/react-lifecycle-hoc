@@ -24,3 +24,16 @@ test('should works with HOC', t => {
 
   t.true(callbackSpy.calledOnce);
 });
+
+test('should return correct props', t => {
+  let propsSpy;
+
+  const Container = componentDidMount(
+    ({ props }) => { propsSpy = props.className; },
+    () => <div />
+  );
+
+  mount(<Container className="expectClassName" />);
+
+  t.is(propsSpy, 'expectClassName');
+});
