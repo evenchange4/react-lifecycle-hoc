@@ -4,7 +4,7 @@ import createHelper from 'recompose/createHelper';
 
 const componentDidMount = (callback, BaseComponent) =>
   class extends React.Component {
-    componentDidMount = () => callback(this.props)
+    componentDidMount = () => callback(this)
     render = () => createElement(BaseComponent, this.props)
   };
 
