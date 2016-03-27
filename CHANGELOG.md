@@ -3,7 +3,7 @@
 ## [HEAD]
 > Unreleased
 
-## [v1.0.5]
+## [v2.0.0]
 > Mar 27, 2016
 
 * [Breaking] refactor(componentDidMount): pass `this` to the callback.
