@@ -2,7 +2,7 @@
 
 > Higher-order components of react lifecycle.
 
-[![Travis][build-badge]][build] [![npm package][npm-badge]][npm] [![Coverage Status][coveralls-badge]][coveralls]
+[![Travis][build-badge]][build] [![Coverage Status][coveralls-badge]][coveralls] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
 
 [build-badge]: https://img.shields.io/travis/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
 [build]: https://travis-ci.org/evenchange4/react-lifecycle-hoc
@@ -12,6 +12,11 @@
 
 [coveralls-badge]: https://img.shields.io/coveralls/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/github/evenchange4/react-lifecycle-hoc
+
+[npm-downloads]: https://img.shields.io/npm/dt/react-lifecycle-hoc.svg?style=flat-square
+
+[license-badge]: https://img.shields.io/npm/l/react-lifecycle-hoc.svg?style=flat-square
+[license]: http://michaelhsu.mit-license.org/
 
 ## Installation
 
@@ -69,3 +74,5 @@ $ npm run test:watch
 ## [CHANGELOG](CHANGELOG.md)
 
 ## [LICENSE](LICENSE)
+
+MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
