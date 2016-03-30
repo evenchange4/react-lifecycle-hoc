@@ -38,7 +38,7 @@
     "prepublish": "npm run build"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.8"
   },
   "dependencies": {
     "recompose": "^0.15.1"
@@ -57,8 +57,8 @@
     "jsdom": "^8.1.0",
     "lint-config-m": "^1.0.5",
     "nyc": "^6.1.1",
-    "react-addons-test-utils": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react-addons-test-utils": "^0.14.8",
+    "react-dom": "^0.14.8",
     "sinon": "^1.17.3"
   },
   "babel": {
