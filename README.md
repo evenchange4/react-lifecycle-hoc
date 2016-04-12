@@ -2,7 +2,9 @@
 
 > Higher-order components of react lifecycle.
 
-[![Travis][build-badge]][build] [![Coverage Status][coveralls-badge]][coveralls] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
+[![Travis][build-badge]][build] [![Codecov Status][codecov-badge]][codecov] [![npm package][npm-badge]][npm] [![npm downloads][npm-downloads]][npm] [![license][license-badge]][license]
+
+[![Dependency Status][dependency-badge]][dependency] [![devDependency Status][devDependency-badge]][devDependency] [![peerDependency Status][peerDependency-badge]][peerDependency]
 
 [build-badge]: https://img.shields.io/travis/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
 [build]: https://travis-ci.org/evenchange4/react-lifecycle-hoc
@@ -10,13 +12,20 @@
 [npm-badge]: https://img.shields.io/npm/v/react-lifecycle-hoc.svg?style=flat-square
 [npm]: https://www.npmjs.org/package/react-lifecycle-hoc
 
-[coveralls-badge]: https://img.shields.io/coveralls/evenchange4/react-lifecycle-hoc/master.svg?style=flat-square
-[coveralls]: https://coveralls.io/github/evenchange4/react-lifecycle-hoc
+[codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-lifecycle-hoc.svg?style=flat-square
+[codecov]: https://codecov.io/github/evenchange4/react-lifecycle-hoc?branch=master
 
 [npm-downloads]: https://img.shields.io/npm/dt/react-lifecycle-hoc.svg?style=flat-square
 
 [license-badge]: https://img.shields.io/npm/l/react-lifecycle-hoc.svg?style=flat-square
 [license]: http://michaelhsu.mit-license.org/
+
+[dependency-badge]: https://david-dm.org/evenchange4/react-lifecycle-hoc.svg?style=flat-square
+[dependency]: https://david-dm.org/evenchange4/react-lifecycle-hoc
+[devDependency-badge]: https://david-dm.org/evenchange4/react-lifecycle-hoc/dev-status.svg?style=flat-square
+[devDependency]: https://david-dm.org/evenchange4/react-lifecycle-hoc#info=devDependencies
+[peerDependency-badge]: https://david-dm.org/evenchange4/react-lifecycle-hoc/peer-status.svg?style=flat-square
+[peerDependency]: https://david-dm.org/evenchange4/react-lifecycle-hoc#info=peerDependencies
 
 ## Installation
 
@@ -33,8 +42,7 @@ import { componentDidMount } from 'react-lifecycle-hoc';
 
 componentDidMount(
   ({ props }) => console.log(props),
-  () => <div/>,
-);
+)(() => <div/>);
 ```
 
 - ES7 decorator
@@ -53,8 +61,7 @@ class Container extends React.Component {
 ```js
 componentDidMount(
   callback: (this: Object) => void,
-  BaseComponent: ReactElementType
-): ReactElementType
+): HigherOrderComponent
 ```
 
 ## Test

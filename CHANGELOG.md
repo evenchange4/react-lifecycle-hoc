@@ -3,6 +3,31 @@
 ## [HEAD]
 > Unreleased
 
+* chore(ava): update lint and test
+* chore(codecov): switch to use codecov
+* chore(react): update to 15.0.1
+
+### **Breaking changes**
+
+* Remove curry as recompose@0.17.0 does
+
+  Before
+
+  ```js
+  const Container = componentDidMount(
+    callbackSpy,
+    () => <div />,
+  );
+  ```
+
+  After
+
+  ```js
+  const Container = componentDidMount(
+    callbackSpy,
+  )(() => <div />);
+  ```
+
 ## [v2.0.0]
 > Mar 27, 2016
 

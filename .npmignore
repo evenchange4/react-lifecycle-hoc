@@ -3,3 +3,4 @@ src
 .nyc_output
 .npmignore
 .stylelintrc
+coverage/

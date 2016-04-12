@@ -2,6 +2,7 @@ import React from 'react';
 import test from 'ava';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
+import { compose } from 'recompose';
 import { default as reactLifecycleHoc, componentDidMount } from '../src/index';
 
 test('should return a object', t => {
@@ -15,10 +16,9 @@ test('should contain componentDidMount function', t => {
 test('should works with HOC', t => {
   const callbackSpy = sinon.spy();
 
-  const Container = componentDidMount(
-    callbackSpy,
-    () => <div />
-  );
+  const Container = compose(
+    componentDidMount(callbackSpy),
+  )(() => <div />);
 
   mount(<Container />);
 
@@ -28,10 +28,11 @@ test('should works with HOC', t => {
 test('should return correct props', t => {
   let propsSpy;
 
-  const Container = componentDidMount(
+  const hoc = componentDidMount(
     ({ props }) => { propsSpy = props.className; },
-    () => <div />
   );
+
+  const Container = hoc(() => <div />);
 
   mount(<Container className="expectClassName" />);
 
