@@ -1,3 +1,5 @@
+/* eslint react/require-render-return:0 */
+
 import React from 'react';
 import createElement from 'recompose/createElement';
 import createHelper from 'recompose/createHelper';
