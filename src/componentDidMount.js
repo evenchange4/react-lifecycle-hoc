@@ -1,13 +1,16 @@
 /* eslint react/require-render-return:0 */
 
 import React from 'react';
-import createElement from 'recompose/createElement';
+import createEagerFactory from 'recompose/createEagerFactory';
 import createHelper from 'recompose/createHelper';
 
-const componentDidMount = callback => BaseComponent =>
-  class extends React.Component {
+const componentDidMount = callback => (BaseComponent) => {
+  const factory = createEagerFactory(BaseComponent);
+
+  return class extends React.Component {
     componentDidMount = () => callback(this)
-    render = () => createElement(BaseComponent, this.props)
+    render = () => factory(this.props)
   };
+};
 
 export default createHelper(componentDidMount, 'componentDidMount');

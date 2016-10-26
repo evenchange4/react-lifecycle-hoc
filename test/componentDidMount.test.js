@@ -5,15 +5,15 @@ import { mount } from 'enzyme';
 import { compose } from 'recompose';
 import { default as reactLifecycleHoc, componentDidMount } from '../src/index';
 
-test('should return a object', t => {
+test('should return a object', (t) => {
   t.is(typeof reactLifecycleHoc, 'object');
 });
 
-test('should contain componentDidMount function', t => {
+test('should contain componentDidMount function', (t) => {
   t.is(typeof reactLifecycleHoc.componentDidMount, 'function');
 });
 
-test('should works with HOC', t => {
+test('should works with HOC', (t) => {
   const callbackSpy = sinon.spy();
 
   const Container = compose(
@@ -25,7 +25,7 @@ test('should works with HOC', t => {
   t.true(callbackSpy.calledOnce);
 });
 
-test('should return correct props', t => {
+test('should return correct props', (t) => {
   let propsSpy;
 
   const hoc = componentDidMount(

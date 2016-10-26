@@ -3,6 +3,14 @@
 ## [HEAD]
 > Unreleased
 
+## [v3.1.0]
+> Oct 26, 2016
+
+* feat(node): upgrade to node v6
+* feat(npm): upgrade to npm v3
+* feat(eslint): upgrade to eslint v3
+* feat(recompose): upgrade to recompose v0.20
+
 ## [v3.0.0]
 > Apr 12, 2016
 
