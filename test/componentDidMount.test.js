@@ -3,7 +3,7 @@ import test from 'ava';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
 import { compose } from 'recompose';
-import { default as reactLifecycleHoc, componentDidMount } from '../src/index';
+import reactLifecycleHoc, { componentDidMount } from '../src/index';
 
 test('should return a object', (t) => {
   t.is(typeof reactLifecycleHoc, 'object');
