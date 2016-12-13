@@ -41,7 +41,7 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
-    "recompose": "^0.20.2"
+    "recompose": "^0.21.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
