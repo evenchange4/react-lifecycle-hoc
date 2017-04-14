@@ -52,7 +52,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
     "codecov": "^1.0.1",
-    "enzyme": "^2.5.1",
+    "enzyme": "^2.8.2",
     "eslint": "^3.9.1",
     "jsdom": "^9.8.3",
     "lint-config-m": "^3.0.0",
