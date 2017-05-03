@@ -41,26 +41,26 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
-    "recompose": "^0.22.0"
+    "recompose": "^0.23.1"
   },
   "devDependencies": {
-    "ava": "^0.18.2",
+    "ava": "^0.19.1",
     "babel-cli": "^6.18.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.18.0",
-    "codecov": "^1.0.1",
+    "codecov": "^2.1.0",
     "enzyme": "^2.5.1",
     "eslint": "^3.9.1",
-    "jsdom": "^9.8.3",
+    "jsdom": "^10.1.0",
     "lint-config-m": "^3.0.0",
     "nyc": "^10.0.0",
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "sinon": "^1.17.6",
+    "sinon": "^2.2.0",
     "stylelint": "^7.5.0"
   },
   "babel": {
